@@ -95,7 +95,7 @@ Or by hand, from `hotsauce-dev-v7/photography-website/`:
 | `pnpm dev:stable` | Start the site with crash auto-recovery (recommended) |
 | `pnpm dev` | Start the site, plain |
 | `pnpm build` | Build for deployment |
-| `pnpm clean` | Free port 3100, delete build files |
+| `pnpm clean` | Free ports 3100–3200, delete build files (`.next`, `.next-dev`) |
 | `pnpm logs` | Watch the server log |
 
 ---

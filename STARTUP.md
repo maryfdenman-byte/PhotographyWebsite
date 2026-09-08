@@ -99,6 +99,13 @@ pnpm dev:stable    # recommended
 the server on crash, and tees output to `logs/dev-server.log` and `logs/dev-server-errors.log`.
 Plain `pnpm dev` is `next dev -p 3100` with none of that.
 
+**Dev and build use separate build directories.** `next dev` writes to `.next-dev`
+(set via `NEXT_DIST_DIR` in the `dev` script and in `scripts/dev-stable.js`); `next build`
+is left on the default `.next`. They previously shared `.next`, so running `pnpm build`
+while the dev server was up overwrote the chunks it held open and left every route
+returning 500 with a misleading `MODULE_NOT_FOUND`. Building while developing is now safe.
+`next build` deliberately keeps the default path so Vercel needs no configuration.
+
 Ready output:
 
 ```
@@ -178,8 +185,9 @@ publishes your entire working tree — including unrelated files you were still 
 
 | Symptom | Fix |
 |---|---|
-| `EADDRINUSE` / port 3100 busy | `pnpm clean` (frees 3100–3200, removes `.next` and `node_modules/.cache`), then `pnpm dev:stable`. `dev:stable`'s own pre-clean only frees 3100 and races its 1 s start delay, so it doesn't always clear a stuck port |
+| `EADDRINUSE` / port 3100 busy | `pnpm clean` (frees 3100–3200, removes `.next`, `.next-dev` and `node_modules/.cache`), then `pnpm dev:stable`. `dev:stable`'s own pre-clean only frees 3100 and races its 1 s start delay, so it doesn't always clear a stuck port |
 | Stale build / blank page | `pnpm dev:clean` |
+| `Cannot find module './chunks/vendor-chunks/…'`, every route 500s | A build wiped the dev server's build directory. Should no longer happen — dev uses `.next-dev`, `next build` uses `.next` — but if it does: `pnpm clean && pnpm dev:stable` |
 | Tailwind classes not applying | Tailwind 4 — check `postcss.config.js` uses `@tailwindcss/postcss`; see `docs/tailwind-v4-guide.md` |
 | Crash, need the trace | `pnpm logs` / `pnpm logs:error` (Ctrl-C to stop tailing) |
 | `command not found: pnpm` | `corepack enable`, then new shell |
@@ -196,7 +204,7 @@ Run from `hotsauce-dev-v7/photography-website`:
 | `pnpm dev:stable` | Dev server with supervisor + logging (recommended) |
 | `pnpm dev` | `next dev -p 3100`, no supervisor |
 | `pnpm dev:clean` | `cleanup.sh` then `next dev` |
-| `pnpm clean` | Free ports 3100–3200, delete `.next` and `node_modules/.cache` |
+| `pnpm clean` | Free ports 3100–3200, delete `.next`, `.next-dev` and `node_modules/.cache` |
 | `pnpm build` / `pnpm start` | Production build / serve on 3100 |
 | `pnpm lint` | `next lint` |
 | `pnpm logs` / `pnpm logs:error` | Tail server / error log |

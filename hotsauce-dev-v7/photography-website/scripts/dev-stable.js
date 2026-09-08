@@ -7,6 +7,7 @@ const os = require('os');
 
 const PORT = process.env.PORT || '3100';
 const PROJECT_ROOT = path.dirname(__dirname);
+const DIST_DIR = '.next-dev';
 const LOG_FILE = path.join(PROJECT_ROOT, 'logs', 'dev-server.log');
 const ERROR_LOG_FILE = path.join(PROJECT_ROOT, 'logs', 'dev-server-errors.log');
 
@@ -35,10 +36,11 @@ function log(message, isError = false) {
 function cleanupBeforeStart() {
   log('🧹 Cleaning up before starting...');
   
-  // Clean .next directory
-  const nextDir = path.join(PROJECT_ROOT, '.next');
+  // Clean the dev build directory only. Never '.next' - that belongs to
+  // 'next build', and wiping it here would break a concurrent build.
+  const nextDir = path.join(PROJECT_ROOT, DIST_DIR);
   if (fs.existsSync(nextDir)) {
-    log('Removing .next directory...');
+    log(`Removing ${DIST_DIR} directory...`);
     fs.rmSync(nextDir, { recursive: true, force: true });
   }
   
@@ -81,6 +83,7 @@ function startDevServer() {
     NODE_ENV: 'development',
     NODE_OPTIONS: '--max-old-space-size=4096',
     NEXT_TELEMETRY_DISABLED: '1',
+    NEXT_DIST_DIR: DIST_DIR,
   };
   
   // Use pnpm if available, otherwise npm

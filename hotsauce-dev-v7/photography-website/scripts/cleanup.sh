@@ -9,6 +9,7 @@ done
 
 # Remove build artifacts
 rm -rf .next
+rm -rf .next-dev
 rm -rf node_modules/.cache
 
 echo "✅ Cleanup complete!"

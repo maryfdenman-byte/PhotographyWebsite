@@ -28,11 +28,12 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
         {/* Logo */}
-        <Link href="/" className="flex flex-col leading-none">
-          <span className="text-lg font-bold tracking-wide text-[#202a91]">Mary Denman</span>
-          <span className="text-xs tracking-[0.3em] uppercase bg-gradient-to-r from-[#A07810] via-[#F5D060] to-[#A07810] bg-clip-text text-transparent">
-            Photography
-          </span>
+        <Link href="/" className="flex items-center">
+          <img
+            src="/images/logo/mary-denman-photography-logo-blue.png"
+            alt="Mary Denman Photography"
+            className="h-8 sm:h-10 w-auto"
+          />
         </Link>
 
         {/* Desktop nav */}

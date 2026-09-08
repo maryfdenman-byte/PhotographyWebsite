@@ -30,23 +30,23 @@ export default function LaughingCarousel() {
           <h2 className="text-3xl md:text-4xl font-bold text-[#202a91]">Real Sessions, Real Joy</h2>
         </div>
 
-        <div className="flex items-center gap-4 justify-center">
+        <div className="flex items-center gap-3 sm:gap-4 justify-center">
           <button
             onClick={prev}
-            className="w-10 h-10 flex items-center justify-center border border-[#202a91]/20 text-[#202a91] hover:border-[#D3AF37] hover:text-[#D3AF37] transition-colors flex-shrink-0"
+            className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center border border-[#202a91]/20 text-[#202a91] hover:border-[#D3AF37] hover:text-[#D3AF37] transition-colors flex-shrink-0"
             aria-label="Previous"
           >
             ‹
           </button>
 
-          <div className="flex gap-3 items-center justify-center min-h-[180px]">
+          <div className="flex gap-3 items-center justify-center min-h-[180px] flex-1 min-w-0 max-w-[664px]">
             {visible.map((slide, i) => (
               <div
                 key={i}
-                className={`overflow-hidden flex-shrink-0 transition-all duration-300 ${
+                className={`overflow-hidden min-w-0 transition-all duration-300 ${
                   i === 1
-                    ? 'w-[38vw] max-w-xs aspect-[4/3]'
-                    : 'w-[20vw] max-w-[160px] aspect-[4/3]'
+                    ? 'basis-full sm:basis-[48%] max-w-xs aspect-[4/3]'
+                    : 'hidden sm:block basis-[26%] max-w-[160px] aspect-[4/3]'
                 }`}
               >
                 <img
@@ -60,7 +60,7 @@ export default function LaughingCarousel() {
 
           <button
             onClick={next}
-            className="w-10 h-10 flex items-center justify-center border border-[#202a91]/20 text-[#202a91] hover:border-[#D3AF37] hover:text-[#D3AF37] transition-colors flex-shrink-0"
+            className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center border border-[#202a91]/20 text-[#202a91] hover:border-[#D3AF37] hover:text-[#D3AF37] transition-colors flex-shrink-0"
             aria-label="Next"
           >
             ›

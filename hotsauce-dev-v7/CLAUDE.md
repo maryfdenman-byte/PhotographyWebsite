@@ -77,18 +77,20 @@ pnpm logs:error   # View error logs only
 ```
 
 ### Editing Content
-1. Navigate to `/content/` folder
-2. Edit relevant `.md` file
-3. Changes auto-reload in browser
+**Not wired up.** The four files in `/content/` are not read by anything —
+no file in `src/` imports `gray-matter` or references `content/`, so editing
+them changes nothing on the site. Page copy is currently hard-coded in the
+components under `src/components/`. Tracked as #4; `STARTUP.md` documents the
+real behaviour.
 
 ### Adding Images
 1. Place images in `/public/images/`
 2. Reference as `/images/filename.jpg`
 
 ## Port Configuration
-- **Assigned Port**: [TO BE DETERMINED DURING SETUP]
+- **Assigned Port**: 3100 (set by `-p 3100` in the `dev` script)
 - **Range**: 3100-3200
-- **Status**: [TO BE UPDATED BY CLAUDE CODE]
+- **Status**: In use. `pnpm dev` serves http://localhost:3100.
 
 ## Dependencies
 All dependencies use LTS/STABLE versions for stability:
@@ -98,29 +100,30 @@ All dependencies use LTS/STABLE versions for stability:
 
 ### Required Dependencies:
 **Core:**
-- next@[RESEARCHED_VERSION]
-- react@[RESEARCHED_VERSION]
-- react-dom@[RESEARCHED_VERSION]
-- typescript@[RESEARCHED_VERSION]
+- next@15.5.0
+- react@19.1.0
+- react-dom@19.1.0
+- typescript@5.9.2
 
 **Styling:**
-- tailwindcss@[RESEARCHED_VERSION] (MUST be v4.1+ minimum)
-- @tailwindcss/postcss@[RESEARCHED_VERSION] (MUST be v4.1+ minimum)
-- postcss@[RESEARCHED_VERSION]
-- autoprefixer@[RESEARCHED_VERSION]
+- tailwindcss@4.1.12 (MUST be v4.1+ minimum)
+- @tailwindcss/postcss@4.1.12 (MUST be v4.1+ minimum)
+- postcss@8.5.6
+- autoprefixer@10.4.21
 
 **Development:**
-- @types/node@[RESEARCHED_VERSION]
-- @types/react@[RESEARCHED_VERSION]
-- @types/react-dom@[RESEARCHED_VERSION]
-- eslint@[RESEARCHED_VERSION]
-- eslint-config-next@[RESEARCHED_VERSION]
-- prettier@[RESEARCHED_VERSION]
+- @types/node@24.3.0
+- @types/react@18.3.12
+- @types/react-dom@18.3.1
+- eslint@9.9.1
+- eslint-config-next@15.0.0
+- prettier@3.3.3
+- @eslint/eslintrc@3.3.7 (added later, for the ESLint 9 flat config — see #3)
 
 **Additional:**
-- next-seo@[RESEARCHED_VERSION]
-- lucide-react@[RESEARCHED_VERSION]
-- gray-matter@[RESEARCHED_VERSION] (required for reading frontmatter)
+- next-seo@6.6.0
+- lucide-react@0.542.0
+- gray-matter@4.0.3 (required for reading frontmatter)
 
 ### Dependency Installation Rules:
 - Install the EXACT versions documented in research - NO SUBSTITUTIONS
@@ -128,30 +131,37 @@ All dependencies use LTS/STABLE versions for stability:
 - If research finds Tailwind < v4.1.0, install v4.1.0 instead
 
 ## Critical Requirements
-- [ ] Use EXACT researched dependency versions
-- [ ] Check existing files with read_file before creating new ones
-- [ ] Leave development server running after setup for review
-- [ ] Follow instructions precisely - no enhancements
+- [x] Use EXACT researched dependency versions
+- (n/a) Check existing files with read_file before creating new ones
+- (n/a) Leave development server running after setup for review
+- (n/a) Follow instructions precisely - no enhancements
+
+*The three above were instructions to the agent performing the original setup,
+not observable state; there is no record of them either way, so they are marked
+n/a rather than ticked.*
 
 ## Success Criteria
-- [ ] All dependencies use EXACT RESEARCHED LTS/STABLE versions (Tailwind CSS v4.1+ minimum)
-- [ ] Core dependencies installed: next, react, react-dom, typescript
-- [ ] Styling dependencies installed: tailwindcss v4.1+, @tailwindcss/postcss v4.1+, postcss, autoprefixer
-- [ ] TypeScript dependencies installed: @types/node, @types/react, @types/react-dom
-- [ ] Development dependencies installed: eslint, eslint-config-next, prettier
-- [ ] Additional dependencies installed: next-seo, lucide-react, gray-matter
-- [ ] Stability scripts created and tested (dev-stable.js, cleanup script)
-- [ ] Logs directory created for error tracking
-- [ ] Environment variables configured (.env.development)
-- [ ] Package manager conflicts resolved (no package-lock.json with pnpm)
-- [ ] Port assigned within range 3100-3200
-- [ ] Development server running on assigned port (FAIL if running on port 3000)
-- [ ] Build completes without errors (`pnpm run build`)
-- [ ] All 4 pages render successfully
-- [ ] All 4 endpoints return 200 status
-- [ ] Development server LEFT RUNNING for review
-- [ ] Content files verified (all 4 pages)
-- [ ] Git repository initialized
+*Verified 2026-09-08 against package.json, docs/dependency-versions.md, the
+files on disk, a `pnpm build` run, and HTTP 200 from all four routes on
+localhost:3100.*
+- [x] All dependencies use EXACT RESEARCHED LTS/STABLE versions (Tailwind CSS v4.1+ minimum)
+- [x] Core dependencies installed: next, react, react-dom, typescript
+- [x] Styling dependencies installed: tailwindcss v4.1+, @tailwindcss/postcss v4.1+, postcss, autoprefixer
+- [x] TypeScript dependencies installed: @types/node, @types/react, @types/react-dom
+- [x] Development dependencies installed: eslint, eslint-config-next, prettier
+- [x] Additional dependencies installed: next-seo, lucide-react, gray-matter
+- [x] Stability scripts created (dev-stable.js, cleanup.js, cleanup.sh present in `scripts/`; not re-run during this check)
+- [x] Logs directory created for error tracking
+- [x] Environment variables configured (.env.development)
+- [x] Package manager conflicts resolved (no package-lock.json with pnpm)
+- [x] Port assigned within range 3100-3200
+- [x] Development server running on assigned port (FAIL if running on port 3000)
+- [x] Build completes without errors (`pnpm run build`)
+- [x] All 4 pages render successfully
+- [x] All 4 endpoints return 200 status
+- [x] Development server LEFT RUNNING for review
+- [x] Content files verified (all 4 pages)
+- [x] Git repository initialized
 
 ## Project Content Files
 Content files are included in the photography-website directory and provide:

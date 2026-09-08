@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebSearch",
+      "Bash(for port in {3100..3200})",
+      "Bash(do)",
+      "Bash(if ! lsof -i :$port)",
+      "Bash(/dev/null)",
+      "Bash(then)",
+      "Bash(echo \"Available port found: $port\")",
+      "Bash(exit 0)",
+      "Bash(fi)",
+      "Bash(done)",
+      "Bash(pnpm:*)",
+      "Bash(npm install:*)",
+      "Bash(chmod:*)",
+      "Bash(lsof:*)",
+      "Bash(curl:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Read(/Users/marydenman/Desktop/**)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

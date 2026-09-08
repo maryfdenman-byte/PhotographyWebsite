@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mary Denman Photography — Website Reference</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 24px;
+      color: #4c5491;
+      background: #faf9f6;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 4px;
+    }
+    .subtitle {
+      color: #9a9abf;
+      font-size: 0.85rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 48px;
+    }
+    h2 {
+      font-size: 1.1rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #A07810;
+      border-bottom: 1px solid #D3AF37;
+      padding-bottom: 6px;
+      margin-top: 48px;
+      margin-bottom: 16px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 12px;
+      font-size: 0.9rem;
+    }
+    th {
+      text-align: left;
+      padding: 10px 14px;
+      background: #f0ece4;
+      color: #4c5491;
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #e8e3d8;
+      color: #4c5491;
+      vertical-align: top;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    tr:hover td {
+      background: #f7f4ef;
+    }
+    code {
+      background: #f0ece4;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 0.85em;
+      color: #A07810;
+      font-family: 'Menlo', 'Monaco', monospace;
+    }
+    .swatch {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      margin-right: 8px;
+      vertical-align: middle;
+      border: 1px solid rgba(0,0,0,0.1);
+    }
+    .note {
+      background: #f0ece4;
+      border-left: 3px solid #D3AF37;
+      padding: 12px 16px;
+      font-size: 0.85rem;
+      color: #4c5491;
+      margin: 12px 0 24px;
+    }
+    .footer {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid #e8e3d8;
+      font-size: 0.8rem;
+      color: #b0adc8;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Mary Denman Photography</h1>
+  <p class="subtitle">Website Reference Document · Updated April 13, 2026</p>
+
+  <!-- SITE SECTIONS -->
+  <h2>Site Sections</h2>
+  <p class="note">Every named block of content on the website is called a <strong>section</strong>. Use these names when talking to Claude.</p>
+  <table>
+    <thead>
+      <tr><th>Section Name</th><th>What It Is</th><th>Page</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Hero</strong></td><td>The big opening statement at the top</td><td>Home</td></tr>
+      <tr><td><strong>Portfolio</strong></td><td>Masonry grid of curated headshot photos</td><td>Home</td></tr>
+      <tr><td><strong>Process</strong></td><td>The 3-step How It Works</td><td>Home</td></tr>
+      <tr><td><strong>Testimonials</strong></td><td>Real client quotes (Michelle, Rick, Sam)</td><td>Home</td></tr>
+      <tr><td><strong>Laughing Carousel</strong></td><td>Sliding candid session photos</td><td>Home</td></tr>
+      <tr><td><strong>About</strong></td><td>Your bio, photo grid, stats, and CTA</td><td>About</td></tr>
+      <tr><td><strong>Pricing</strong></td><td>The two pricing cards + payment methods</td><td>Pricing</td></tr>
+      <tr><td><strong>FAQ</strong></td><td>Accordion questions and answers</td><td>Pricing</td></tr>
+      <tr><td><strong>Contact</strong></td><td>Contact form + your info + hours</td><td>Contact</td></tr>
+      <tr><td><strong>Header</strong></td><td>Sticky navigation bar at the very top</td><td>All pages</td></tr>
+      <tr><td><strong>Footer</strong></td><td>Bottom of every page — links, contact, copyright</td><td>All pages</td></tr>
+    </tbody>
+  </table>
+
+  <!-- PAGE STRUCTURE -->
+  <h2>Page Structure</h2>
+  <table>
+    <thead>
+      <tr><th>Page</th><th>URL</th><th>Sections on That Page</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Home</strong></td><td><code>/</code></td><td>Hero, Portfolio, Process, Testimonials, Laughing Carousel</td></tr>
+      <tr><td><strong>About</strong></td><td><code>/about</code></td><td>About</td></tr>
+      <tr><td><strong>Pricing</strong></td><td><code>/pricing</code></td><td>Pricing, FAQ</td></tr>
+      <tr><td><strong>Contact</strong></td><td><code>/contact</code></td><td>Contact</td></tr>
+    </tbody>
+  </table>
+
+  <!-- COLOR PALETTE -->
+  <h2>Color Palette</h2>
+  <table>
+    <thead>
+      <tr><th>Role</th><th>Hex Code</th><th>Used For</th><th>Status</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Blue (primary) ✦ CURRENT</strong></td>
+        <td><span class="swatch" style="background:#202a91;"></span><code>#202a91</code></td>
+        <td>Headings, body text, nav links, pricing card background</td>
+        <td style="color:green;font-weight:600;">Active</td>
+      </tr>
+      <tr>
+        <td><strong>Blue (original)</strong></td>
+        <td><span class="swatch" style="background:#4c5491;"></span><code>#4c5491</code></td>
+        <td>Original blue used at launch — replaced April 13</td>
+        <td style="color:#999;">Retired</td>
+      </tr>
+      <tr>
+        <td><strong>Blue gradient (footer &amp; pricing card)</strong></td>
+        <td><span class="swatch" style="background:linear-gradient(to bottom right,#2f3fc0,#202a91,#0f1550);"></span><code>#2f3fc0 → #202a91 → #0f1550</code></td>
+        <td>Footer background, Per Image pricing card</td>
+        <td style="color:green;font-weight:600;">Active</td>
+      </tr>
+      <tr>
+        <td><strong>Gold (base)</strong></td>
+        <td><span class="swatch" style="background:#D3AF37;"></span><code>#D3AF37</code></td>
+        <td>Borders, dot indicators, hover accents</td>
+        <td style="color:green;font-weight:600;">Active</td>
+      </tr>
+      <tr>
+        <td><strong>Gold gradient</strong></td>
+        <td><span class="swatch" style="background:linear-gradient(to right,#A07810,#D3AF37,#F5D060);"></span><code>#A07810 → #D3AF37 → #F5D060</code></td>
+        <td>Buttons, labels, highlights, "Photography" wordmark</td>
+        <td style="color:green;font-weight:600;">Active</td>
+      </tr>
+      <tr>
+        <td><strong>Background ✦ CURRENT</strong></td>
+        <td><span class="swatch" style="background:#fbfaf8;"></span><code>#fbfaf8</code></td>
+        <td>Main page background (neutral off-white, very slight warmth)</td>
+        <td style="color:green;font-weight:600;">Active</td>
+      </tr>
+      <tr>
+        <td><strong>Background (original)</strong></td>
+        <td><span class="swatch" style="background:#faf9f6;"></span><code>#faf9f6</code></td>
+        <td>Original warm off-white — replaced April 13</td>
+        <td style="color:#999;">Retired</td>
+      </tr>
+      <tr>
+        <td><strong>Section alt background ✦ CURRENT</strong></td>
+        <td><span class="swatch" style="background:#f4f3ee;"></span><code>#f4f3ee</code></td>
+        <td>Process, Contact, Carousel, About backgrounds (neutral warm-leaning)</td>
+        <td style="color:green;font-weight:600;">Active</td>
+      </tr>
+      <tr>
+        <td><strong>Section alt background (original)</strong></td>
+        <td><span class="swatch" style="background:#f0ece4;"></span><code>#f0ece4</code></td>
+        <td>Original warm beige — replaced April 13</td>
+        <td style="color:#999;">Retired</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- IMAGE NAMING -->
+  <h2>Image Naming Convention</h2>
+  <div class="note">
+    Formula: <code>mary-denman-[type]-[description]-[location].jpg</code><br/>
+    Example: <code>mary-denman-corporate-headshot-greenville-sc.jpg</code>
+  </div>
+  <table>
+    <thead>
+      <tr><th>Type</th><th>Example Filename</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Professional headshot</td><td><code>mary-denman-professional-headshot-greenville-sc.jpg</code></td></tr>
+      <tr><td>Business / corporate</td><td><code>mary-denman-business-headshot-greenville-sc.jpg</code></td></tr>
+      <tr><td>Author headshot</td><td><code>mary-denman-author-headshot-greenville-sc.jpg</code></td></tr>
+      <tr><td>Actor headshot</td><td><code>mary-denman-actor-headshot-greenville-sc.jpg</code></td></tr>
+      <tr><td>Laughing / candid</td><td><code>mary-denman-fun-headshot-session-greenville-sc.jpg</code></td></tr>
+      <tr><td>Studio / about</td><td><code>mary-denman-headshot-photographer-greenville-sc.jpg</code></td></tr>
+    </tbody>
+  </table>
+
+  <!-- IMAGE FOLDERS -->
+  <h2>Image Folder Locations</h2>
+  <table>
+    <thead>
+      <tr><th>Folder</th><th>Contents</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><code>public/images/about/</code></td><td>Your portrait + studio photo (used on About page)</td></tr>
+      <tr><td><code>public/images/gallery/</code></td><td>10 curated headshots used in the Portfolio section</td></tr>
+      <tr><td><code>public/images/laughing/</code></td><td>6 candid/laughing session photos for the carousel</td></tr>
+      <tr><td><code>public/images/</code> (root)</td><td>66 additional client and stock headshots, all SEO-renamed</td></tr>
+      <tr><td><code>public/videos/faq/</code></td><td>FAQ answer videos (drop here, Claude will wire them up)</td></tr>
+    </tbody>
+  </table>
+
+  <!-- GRID TYPES -->
+  <h2>Grid Types — Web Design Vocabulary</h2>
+  <table>
+    <thead>
+      <tr><th>Name</th><th>What It Looks Like</th><th>Used On This Site</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Masonry</strong></td><td>Pinterest-style — columns of images at varying heights</td><td>Portfolio section</td></tr>
+      <tr><td><strong>Uniform grid</strong></td><td>Equal-sized boxes in neat rows and columns</td><td>Pricing cards, Process steps, Stats</td></tr>
+      <tr><td><strong>Asymmetric grid</strong></td><td>Intentionally unequal columns or sizes for visual interest</td><td>Hero (text + image)</td></tr>
+      <tr><td><strong>Mosaic</strong></td><td>Mix of large and small tiles, like a magazine layout</td><td>Not yet used</td></tr>
+      <tr><td><strong>2-up / 3-up / 4-up</strong></td><td>Shorthand for how many items appear per row</td><td>About image strip = 3-up, Pricing = 2-up</td></tr>
+      <tr><td><strong>Fluid / Responsive</strong></td><td>Columns adjust automatically to screen size</td><td>All grids on this site</td></tr>
+    </tbody>
+  </table>
+
+  <!-- DEV INFO -->
+  <h2>Development Info</h2>
+  <table>
+    <thead>
+      <tr><th>Item</th><th>Details</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Project folder</strong></td><td><code>/Users/marydenman/documents/claude website/hotsauce-dev-v7/photography-website</code></td></tr>
+      <tr><td><strong>Session notes</strong></td><td><code>/Users/marydenman/Documents/Claude Website/Stored Claude Work/</code></td></tr>
+      <tr><td><strong>To preview the site</strong></td><td>Run <code>pnpm run dev</code> then open <code>http://localhost:3100</code></td></tr>
+      <tr><td><strong>If the site goes blank</strong></td><td>The dev server stopped. Open Terminal and run:<br/><code>cd "/Users/marydenman/documents/claude website/hotsauce-dev-v7/photography-website" && pnpm run dev</code></td></tr>
+      <tr><td><strong>Tech stack</strong></td><td>Next.js 15 · Tailwind CSS 4 · pnpm</td></tr>
+    </tbody>
+  </table>
+
+  <!-- SECTION HEIGHT -->
+  <h2>How to Request Section Height Changes</h2>
+  <p class="note">Height is controlled by <strong>padding</strong> (space above and below the content) — not a fixed height. Just describe how it feels and Claude handles the rest.</p>
+  <table>
+    <thead>
+      <tr><th>Method</th><th>Example</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Relative terms</strong></td><td>"Make the Hero taller" · "Shrink the Testimonials section" · "The Process feels cramped, give it more breathing room"</td></tr>
+      <tr><td><strong>Comparison terms</strong></td><td>"Make Pricing about half the height it is now" · "FAQ should be similar height to Contact"</td></tr>
+      <tr><td><strong>T-shirt sizing</strong></td><td>"Make the Hero XL" · "Testimonials should be S" · sizes: XS · S · M · L · XL</td></tr>
+    </tbody>
+  </table>
+
+  <!-- TO DO -->
+  <h2>Still To Do</h2>
+  <table>
+    <thead>
+      <tr><th>Task</th><th>Notes</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Wire up contact form</td><td>Needs email service — Resend or Formspree recommended</td></tr>
+      <tr><td>Add social media URLs</td><td>Instagram and Facebook links currently placeholder</td></tr>
+      <tr><td>FAQ videos</td><td>Drop in <code>public/videos/faq/</code> — Claude will attach to questions</td></tr>
+      <tr><td>Deploy to Vercel</td><td>Run <code>vercel</code> from project root when ready</td></tr>
+    </tbody>
+  </table>
+
+  <div class="footer">
+    Mary Denman Photography · Generated by Claude · April 13, 2026
+  </div>
+
+</body>
+</html>

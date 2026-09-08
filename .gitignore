@@ -5,3 +5,6 @@ logs/
 *.log
 .env
 .env.*
+
+# Claude Code personal settings
+.claude/settings.local.json

@@ -2,7 +2,7 @@ export default function AboutSection() {
   return (
     <section id="about" className="bg-[#f4f3ee]">
       {/* Bio section below */}
-      <div className="py-24 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+      <div className="py-16 md:py-24 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-10 md:gap-16 items-center">
         {/* Text */}
         <div>
           <p className="text-base tracking-[0.3em] uppercase font-bold mb-4 bg-gradient-to-r from-[#A07810] via-[#F5D060] to-[#A07810] bg-clip-text text-transparent">
@@ -49,15 +49,15 @@ export default function AboutSection() {
         </div>
 
         {/* Photo beside bio */}
-        <div className="relative hidden md:block">
-          <div className="aspect-[3/4] w-full max-w-md ml-auto overflow-hidden bg-stone-100 rounded-2xl">
+        <div className="relative order-first md:order-none">
+          <div className="aspect-[4/3] md:aspect-[3/4] w-full max-w-md ml-auto overflow-hidden bg-stone-100 rounded-2xl">
             <img
               src="/images/about/mary-denman-headshot-photographer-greenville-sc.jpg"
               alt="Mary Denman - Professional Headshot Photographer Greenville SC"
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="absolute -bottom-4 -right-4 w-full max-w-md h-full border border-[#D3AF37]/40 -z-10" />
+          <div className="absolute -bottom-4 -right-4 w-full max-w-md h-full border border-[#D3AF37]/40 -z-10 hidden md:block" />
         </div>
       </div>
     </section>

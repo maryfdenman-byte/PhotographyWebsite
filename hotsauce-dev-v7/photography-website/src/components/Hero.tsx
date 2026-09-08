@@ -6,13 +6,13 @@ export default function Hero() {
       <div className="absolute bottom-16 right-16 w-64 h-64 border border-[#D3AF37]/20 -z-10 hidden md:block" />
       <div className="absolute top-24 left-8 w-32 h-32 border border-[#D3AF37]/10 -z-10 hidden md:block" />
 
-      <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center py-24">
+      <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-8 md:gap-12 items-center pt-24 pb-12 md:py-24">
         {/* Text */}
         <div>
           <p className="text-base tracking-[0.3em] uppercase font-bold mb-6 bg-gradient-to-r from-[#A07810] via-[#F5D060] to-[#A07810] bg-clip-text text-transparent">
             Greenville &amp; Taylors, SC
           </p>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-[#202a91] mb-8">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-[#202a91] mb-8">
             From Uncomfortable
             <br />
             <span className="italic font-light bg-gradient-to-r from-[#A07810] via-[#D3AF37] to-[#F5D060] bg-clip-text text-transparent">
@@ -21,7 +21,7 @@ export default function Hero() {
             <br />
             in One Session
           </h1>
-          <p className="text-[#202a91]/60 text-lg leading-relaxed mb-10 max-w-md">
+          <p className="text-[#202a91]/60 text-lg leading-relaxed mb-8 md:mb-10 max-w-md">
             Professional headshots that show the world who you really are — coached, comfortable, and confident.
           </p>
           <div className="flex flex-wrap gap-4">
@@ -41,15 +41,15 @@ export default function Hero() {
         </div>
 
         {/* Hero image */}
-        <div className="relative hidden md:block">
-          <div className="aspect-[3/4] w-full max-w-md ml-auto overflow-hidden bg-stone-100">
+        <div className="relative order-first md:order-none">
+          <div className="aspect-[4/3] md:aspect-[3/4] w-full max-w-md ml-auto overflow-hidden bg-stone-100">
             <img
               src="/images/gallery/mary-denman-model-headshot-greenville-sc.jpg"
               alt="Model Headshot - Mary Denman Photography Greenville SC"
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="absolute -bottom-4 -left-4 w-full max-w-md h-full border border-[#D3AF37]/40 -z-10" />
+          <div className="absolute -bottom-4 -left-4 w-full max-w-md h-full border border-[#D3AF37]/40 -z-10 hidden md:block" />
         </div>
       </div>
     </section>

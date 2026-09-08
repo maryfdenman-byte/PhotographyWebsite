@@ -242,6 +242,22 @@ Run these from the `photography-website` folder.
 
 ---
 
+## Automatic Backups to GitHub
+
+Every time Claude writes or edits a file in this project, it is committed and pushed
+to GitHub automatically — you don't need to run any git commands.
+
+- **Where it's set up:** `.claude/hooks/auto-push.sh`
+- **To review or turn it off:** run the `/hooks` command inside Claude Code
+- **If a push fails** (no internet, say), the change is still committed on your Mac.
+  Catch up later with `git push origin main`.
+- **What went wrong:** `.git/claude-autopush.log`
+
+> **Your repo is public.** Anything Claude edits here becomes publicly visible on
+> GitHub within seconds. To change that: `gh repo edit maryfdenman-byte/PhotographyWebsite --visibility private`
+
+---
+
 ## Reference
 
 - **Project root:** `/Users/marydenman/Documents/Claude Website`

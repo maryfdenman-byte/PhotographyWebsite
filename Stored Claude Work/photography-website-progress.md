@@ -44,18 +44,25 @@
 
 | Role | Hex | Usage |
 |---|---|---|
-| Blue (primary) | `#4c5491` | Headings, body text, nav |
+| Blue (primary) | `#202a91` | Headings, body text, nav |
+| Blue gradient | `#2f3fc0` → `#202a91` → `#0f1550` | Footer background, pricing feature card |
 | Gold (accent) | `#D3AF37` | Base gold |
 | Gold gradient | `#A07810` → `#D3AF37` → `#F5D060` | Buttons, labels, highlights |
-| Background | `#faf9f6` | Main page background (warm off-white) |
-| Section alt bg | `#f0ece4` | About, Process, Carousel, Contact backgrounds |
-| Footer bg | `#4c5491` | Footer (uses primary blue) |
+| Gold gradient (hover) | `#B8960C` → `#E5C85A` → `#F5D060` | Hover state on every gold button |
+| Background | `#fbfaf8` | Main page background (warm off-white) |
+| Section alt bg | `#f4f3ee` | About, Process, Carousel, Contact, Testimonials backgrounds |
 
 ### Gold Gradient (metallic sheen)
 ```
 bg-gradient-to-r from-[#A07810] via-[#D3AF37] to-[#F5D060]
 ```
 For text: add `bg-clip-text text-transparent`
+
+### Blue Gradient
+```
+bg-gradient-to-br from-[#2f3fc0] via-[#202a91] to-[#0f1550]
+```
+Used by `Footer.tsx` and the highlighted card in `PricingSection.tsx`.
 
 ---
 

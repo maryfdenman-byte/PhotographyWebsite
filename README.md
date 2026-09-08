@@ -66,11 +66,13 @@ in `public/videos/`.
 
 | Role | Hex |
 |---|---|
-| Blue (primary) | `#4c5491` |
+| Blue (primary) | `#202a91` |
+| Blue gradient | `#2f3fc0` → `#202a91` → `#0f1550` |
 | Gold (accent) | `#D3AF37` |
 | Gold gradient | `#A07810` → `#D3AF37` → `#F5D060` |
-| Page background | `#faf9f6` |
-| Alternate section background | `#f0ece4` |
+| Gold gradient (hover) | `#B8960C` → `#E5C85A` → `#F5D060` |
+| Page background | `#fbfaf8` |
+| Alternate section background | `#f4f3ee` |
 
 ### Real business details baked into the site
 

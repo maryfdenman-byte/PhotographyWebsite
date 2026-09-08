@@ -65,8 +65,14 @@ export default function Footer() {
               >
                 Instagram
               </a>
-              <a href="#" aria-label="Facebook" className="text-white/40 hover:text-white transition-colors text-sm tracking-wide">
-                Facebook
+              <a
+                href="https://www.linkedin.com/in/mary-denman-226918137"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="text-white/40 hover:text-white transition-colors text-sm tracking-wide"
+              >
+                LinkedIn
               </a>
             </div>
           </div>

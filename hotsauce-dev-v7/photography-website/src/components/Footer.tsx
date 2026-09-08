@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { Instagram, Linkedin } from 'lucide-react'
 
 const navLinks = [
   { name: 'Portfolio', href: '/#portfolio' },
@@ -55,24 +56,24 @@ export default function Footer() {
               </p>
               <p>250 Mill Street BL1225<br />Taylors, SC 29687</p>
             </div>
-            <div className="flex gap-4 mt-6">
+            <div className="flex gap-3 mt-6">
               <a
                 href="https://www.instagram.com/marydenmanphotography/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="text-white/40 hover:text-white transition-colors text-sm tracking-wide"
+                className="w-10 h-10 flex items-center justify-center border border-[#D3AF37]/30 text-[#D3AF37] hover:text-[#F5D060] hover:border-[#F5D060] hover:bg-[#D3AF37]/10 transition-all"
               >
-                Instagram
+                <Instagram size={18} strokeWidth={1.5} />
               </a>
               <a
                 href="https://www.linkedin.com/in/mary-denman-226918137"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="text-white/40 hover:text-white transition-colors text-sm tracking-wide"
+                className="w-10 h-10 flex items-center justify-center border border-[#D3AF37]/30 text-[#D3AF37] hover:text-[#F5D060] hover:border-[#F5D060] hover:bg-[#D3AF37]/10 transition-all"
               >
-                LinkedIn
+                <Linkedin size={18} strokeWidth={1.5} />
               </a>
             </div>
           </div>

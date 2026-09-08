@@ -59,8 +59,9 @@ Away Confident), Testimonials (real client quotes), LaughingCarousel, FAQ
 69 files. Named for SEO using the formula
 `mary-denman-[service-type]-[description]-[location].jpg` — for example
 `mary-denman-professional-headshot-greenville-sc-laura.jpg`. Subfolders hold the
-`about/`, `gallery/` and `laughing/` sets; the rest sit at the root. Videos live
-in `public/videos/`.
+`about/`, `gallery/` and `laughing/` sets; the rest sit at the root. Only 17 of
+the 86 images are used by the site — the other 69 are kept deliberately for
+future use; see `public/images/README.md`. Videos live in `public/videos/`.
 
 ### Colors
 

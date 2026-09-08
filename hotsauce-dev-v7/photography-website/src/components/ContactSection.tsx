@@ -21,12 +21,57 @@ const hours = [
   { day: 'Sunday', time: 'Closed' },
 ]
 
-export default function ContactSection() {
-  const [submitted, setSubmitted] = useState(false)
+const emptyForm = {
+  firstName: '',
+  lastName: '',
+  email: '',
+  service: '',
+  message: '',
+  company: '', // honeypot — hidden from real visitors
+}
 
-  function handleSubmit(e: React.FormEvent) {
+const inputClass =
+  'w-full px-4 py-3 bg-white border border-[#202a91]/10 text-[#202a91] text-sm focus:outline-none focus:border-[#D3AF37] transition-colors'
+const labelClass = 'block text-xs tracking-widest uppercase text-[#202a91]/40 mb-2'
+
+type Status = 'idle' | 'submitting' | 'success' | 'error'
+
+export default function ContactSection() {
+  const [form, setForm] = useState(emptyForm)
+  const [status, setStatus] = useState<Status>('idle')
+  const [error, setError] = useState('')
+
+  function update(field: keyof typeof emptyForm) {
+    return (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+      setForm((f) => ({ ...f, [field]: e.target.value }))
+    }
+  }
+
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
-    setSubmitted(true)
+    setStatus('submitting')
+    setError('')
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      })
+      const data = await res.json().catch(() => ({}))
+
+      if (!res.ok || !data.ok) {
+        setError(data.error || 'Something went wrong. Please email maryfdenman@gmail.com directly.')
+        setStatus('error')
+        return
+      }
+
+      setForm(emptyForm)
+      setStatus('success')
+    } catch {
+      setError('Could not reach the server. Please check your connection, or email maryfdenman@gmail.com directly.')
+      setStatus('error')
+    }
   }
 
   return (
@@ -79,7 +124,7 @@ export default function ContactSection() {
 
           {/* Form */}
           <div>
-            {submitted ? (
+            {status === 'success' ? (
               <div className="flex flex-col items-center justify-center h-full text-center py-16">
                 <div className="text-4xl mb-4">✓</div>
                 <h3 className="text-xl font-bold text-[#202a91] mb-2">Message Sent!</h3>
@@ -89,51 +134,93 @@ export default function ContactSection() {
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs tracking-widest uppercase text-[#202a91]/40 mb-2">First Name</label>
+                    <label htmlFor="firstName" className={labelClass}>First Name</label>
                     <input
+                      id="firstName"
+                      name="firstName"
                       type="text"
                       required
-                      className="w-full px-4 py-3 bg-white border border-[#202a91]/10 text-[#202a91] text-sm focus:outline-none focus:border-[#D3AF37] transition-colors"
+                      value={form.firstName}
+                      onChange={update('firstName')}
+                      className={inputClass}
                     />
                   </div>
                   <div>
-                    <label className="block text-xs tracking-widest uppercase text-[#202a91]/40 mb-2">Last Name</label>
+                    <label htmlFor="lastName" className={labelClass}>Last Name</label>
                     <input
+                      id="lastName"
+                      name="lastName"
                       type="text"
                       required
-                      className="w-full px-4 py-3 bg-white border border-[#202a91]/10 text-[#202a91] text-sm focus:outline-none focus:border-[#D3AF37] transition-colors"
+                      value={form.lastName}
+                      onChange={update('lastName')}
+                      className={inputClass}
                     />
                   </div>
                 </div>
                 <div>
-                  <label className="block text-xs tracking-widest uppercase text-[#202a91]/40 mb-2">Email</label>
+                  <label htmlFor="email" className={labelClass}>Email</label>
                   <input
+                    id="email"
+                    name="email"
                     type="email"
                     required
-                    className="w-full px-4 py-3 bg-white border border-[#202a91]/10 text-[#202a91] text-sm focus:outline-none focus:border-[#D3AF37] transition-colors"
+                    value={form.email}
+                    onChange={update('email')}
+                    className={inputClass}
                   />
                 </div>
                 <div>
-                  <label className="block text-xs tracking-widest uppercase text-[#202a91]/40 mb-2">Service</label>
+                  <label htmlFor="service" className={labelClass}>Service</label>
                   <select
-                    className="w-full px-4 py-3 bg-white border border-[#202a91]/10 text-[#202a91] text-sm focus:outline-none focus:border-[#D3AF37] transition-colors"
+                    id="service"
+                    name="service"
+                    value={form.service}
+                    onChange={update('service')}
+                    className={inputClass}
                   >
                     <option value="">Select a service…</option>
                     {services.map((s) => <option key={s}>{s}</option>)}
                   </select>
                 </div>
                 <div>
-                  <label className="block text-xs tracking-widest uppercase text-[#202a91]/40 mb-2">Message</label>
+                  <label htmlFor="message" className={labelClass}>Message</label>
                   <textarea
+                    id="message"
+                    name="message"
                     rows={5}
-                    className="w-full px-4 py-3 bg-white border border-[#202a91]/10 text-[#202a91] text-sm focus:outline-none focus:border-[#D3AF37] transition-colors resize-none"
+                    value={form.message}
+                    onChange={update('message')}
+                    className={`${inputClass} resize-none`}
                   />
                 </div>
+
+                {/* Honeypot — hidden from people, tempting to bots */}
+                <div className="hidden" aria-hidden="true">
+                  <label htmlFor="company">Company</label>
+                  <input
+                    id="company"
+                    name="company"
+                    type="text"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    value={form.company}
+                    onChange={update('company')}
+                  />
+                </div>
+
+                {status === 'error' && (
+                  <p role="alert" className="text-sm text-red-700 bg-red-50 border border-red-200 px-4 py-3">
+                    {error}
+                  </p>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full py-3 rounded-lg bg-gradient-to-r from-[#A07810] via-[#D3AF37] to-[#F5D060] text-white text-sm font-semibold tracking-widest uppercase hover:from-[#B8960C] hover:via-[#E5C85A] hover:to-[#F5D060] transition-all shadow-md"
+                  disabled={status === 'submitting'}
+                  className="w-full py-3 rounded-lg bg-gradient-to-r from-[#A07810] via-[#D3AF37] to-[#F5D060] text-white text-sm font-semibold tracking-widest uppercase hover:from-[#B8960C] hover:via-[#E5C85A] hover:to-[#F5D060] transition-all shadow-md disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  Send Message
+                  {status === 'submitting' ? 'Sending…' : 'Send Message'}
                 </button>
               </form>
             )}

@@ -14,3 +14,5 @@ yarn.lock
 # Cache directories
 node_modules/.cache
 .next/cache
+# Env template is safe to commit — it holds no secrets
+!.env.example

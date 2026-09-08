@@ -1,21 +1,19 @@
-// Grid: 6 columns × 2 rows at 200px = 400px total height
-// Portrait images (col 1, 3, 5) span both rows. Landscape pairs fill cols 2, 4, 6.
+// Mosaic grid, filled column by column: a portrait fills a whole column height of
+// two rows, a landscape pair stacks to fill the same space. The number of rows per
+// breakpoint therefore sets the number of columns — 6 rows gives 2 columns on a
+// phone, 4 rows gives 3 on a tablet, 2 rows gives the full 6 across on a desktop.
+// Row height is 3/4 of a column's width at each breakpoint, so photos keep the same
+// shape at every size: landscapes 4:3, portraits 2:3.
 const photos = [
-  // Portrait — col 1, spans both rows
-  { src: '/images/gallery/mary-denman-professional-headshot-taylors-sc.jpg',    label: 'Professional Headshot', category: 'Headshots',   col: 1, rowStart: 1, rowSpan: 2 },
-  // Landscape pair — col 2
-  { src: '/images/gallery/mary-denman-business-headshot-greenville-sc.jpg',      label: 'Business Headshot',     category: 'Corporate',   col: 2, rowStart: 1, rowSpan: 1 },
-  { src: '/images/gallery/mary-denman-author-portrait-greenville-sc.jpg',        label: 'Author Portrait',       category: 'Portrait',    col: 2, rowStart: 2, rowSpan: 1 },
-  // Portrait — col 3, spans both rows
-  { src: '/images/gallery/mary-denman-author-headshot-greenville-sc.jpg',        label: 'Author Headshot',       category: 'Portrait',    col: 3, rowStart: 1, rowSpan: 2 },
-  // Landscape pair — col 4
-  { src: '/images/gallery/mary-denman-actor-headshot-greenville-sc.jpg',         label: 'Actor Headshot',        category: 'Actor',       col: 4, rowStart: 1, rowSpan: 1 },
-  { src: '/images/gallery/mary-denman-realtor-headshot-greenville-sc.jpg',       label: 'Realtor Headshot',      category: 'Corporate',   col: 4, rowStart: 2, rowSpan: 1 },
-  // Portrait — col 5, spans both rows
-  { src: '/images/gallery/mary-denman-professional-headshots-greenville-sc.jpg', label: 'Professional Headshot', category: 'LinkedIn',    col: 5, rowStart: 1, rowSpan: 2 },
-  // Landscape pair — col 6
-  { src: '/images/gallery/mary-denman-doctor-headshot-greenville-sc.jpg',        label: 'Doctor Headshot',       category: 'Corporate',   col: 6, rowStart: 1, rowSpan: 1 },
-  { src: '/images/gallery/mary-denman-corporate-headshots-greenville-sc.jpg',    label: 'Corporate Headshots',   category: 'Office Team', col: 6, rowStart: 2, rowSpan: 1 },
+  { src: '/images/gallery/mary-denman-professional-headshot-taylors-sc.jpg',    label: 'Professional Headshot', category: 'Headshots',   orientation: 'portrait'  },
+  { src: '/images/gallery/mary-denman-business-headshot-greenville-sc.jpg',      label: 'Business Headshot',     category: 'Corporate',   orientation: 'landscape' },
+  { src: '/images/gallery/mary-denman-author-portrait-greenville-sc.jpg',        label: 'Author Portrait',       category: 'Portrait',    orientation: 'landscape' },
+  { src: '/images/gallery/mary-denman-author-headshot-greenville-sc.jpg',        label: 'Author Headshot',       category: 'Portrait',    orientation: 'portrait'  },
+  { src: '/images/gallery/mary-denman-actor-headshot-greenville-sc.jpg',         label: 'Actor Headshot',        category: 'Actor',       orientation: 'landscape' },
+  { src: '/images/gallery/mary-denman-realtor-headshot-greenville-sc.jpg',       label: 'Realtor Headshot',      category: 'Corporate',   orientation: 'landscape' },
+  { src: '/images/gallery/mary-denman-professional-headshots-greenville-sc.jpg', label: 'Professional Headshot', category: 'LinkedIn',    orientation: 'portrait'  },
+  { src: '/images/gallery/mary-denman-doctor-headshot-greenville-sc.jpg',        label: 'Doctor Headshot',       category: 'Corporate',   orientation: 'landscape' },
+  { src: '/images/gallery/mary-denman-corporate-headshots-greenville-sc.jpg',    label: 'Corporate Headshots',   category: 'Office Team', orientation: 'landscape' },
 ]
 
 export default function Gallery() {
@@ -36,17 +34,17 @@ export default function Gallery() {
 
       {/* Full-width image grid */}
       <div
-        className="grid grid-cols-6 gap-1"
-        style={{ gridTemplateRows: 'repeat(2, 200px)' }}
+        className="grid grid-flow-col auto-cols-fr gap-1
+                   grid-rows-[repeat(6,37.5vw)]
+                   md:grid-rows-[repeat(4,25vw)]
+                   lg:grid-rows-[repeat(2,12.5vw)]"
       >
         {photos.map((photo, i) => (
           <div
             key={i}
-            className="overflow-hidden group relative cursor-pointer bg-stone-100"
-            style={{
-              gridColumn: photo.col,
-              gridRow: `${photo.rowStart} / span ${photo.rowSpan}`,
-            }}
+            className={`overflow-hidden group relative cursor-pointer bg-stone-100 ${
+              photo.orientation === 'portrait' ? 'row-span-2' : 'row-span-1'
+            }`}
           >
             <img
               src={photo.src}

@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 const payments = ['Cash', 'Credit Card', 'Venmo', 'Cash App', 'PayPal']
 
 export default function PricingSection() {
@@ -62,18 +64,18 @@ export default function PricingSection() {
             ))}
           </div>
           <div className="mt-10">
-            <a
+            <Link
               href="/contact"
               className="inline-block px-8 py-3 rounded-lg bg-gradient-to-r from-[#A07810] via-[#D3AF37] to-[#F5D060] text-[#202a91] text-sm font-semibold tracking-widest uppercase hover:from-[#B8960C] hover:via-[#E5C85A] hover:to-[#F5D060] transition-all shadow-md mr-4"
             >
               Book a Session
-            </a>
-            <a
+            </Link>
+            <Link
               href="/contact"
               className="inline-block px-8 py-3 text-[#202a91]/50 text-sm tracking-wide underline underline-offset-4 hover:text-[#202a91] transition-colors"
             >
               Request a Custom Proposal
-            </a>
+            </Link>
           </div>
         </div>
       </div>

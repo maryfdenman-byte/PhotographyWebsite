@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-[#fbfaf8] px-6 overflow-hidden">
@@ -31,12 +33,12 @@ export default function Hero() {
             >
               View Portfolio
             </a>
-            <a
+            <Link
               href="/contact"
               className="px-8 py-3 rounded-lg bg-gradient-to-r from-[#A07810] via-[#D3AF37] to-[#F5D060] text-[#202a91] text-sm font-semibold tracking-widest uppercase hover:from-[#B8960C] hover:via-[#E5C85A] hover:to-[#F5D060] transition-all shadow-md"
             >
               Book a Session
-            </a>
+            </Link>
           </div>
         </div>
 

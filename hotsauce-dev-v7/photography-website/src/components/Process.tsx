@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 const steps = [
   {
     number: '01',
@@ -45,12 +47,12 @@ export default function Process() {
         </div>
 
         <div className="text-center mt-12">
-          <a
+          <Link
             href="/contact"
             className="inline-block px-8 py-3 rounded-lg bg-gradient-to-r from-[#A07810] via-[#D3AF37] to-[#F5D060] text-[#202a91] text-sm font-semibold tracking-widest uppercase hover:from-[#B8960C] hover:via-[#E5C85A] hover:to-[#F5D060] transition-all shadow-md"
           >
             Book Your Session
-          </a>
+          </Link>
         </div>
       </div>
     </section>

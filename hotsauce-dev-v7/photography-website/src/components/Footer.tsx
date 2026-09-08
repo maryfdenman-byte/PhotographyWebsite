@@ -56,7 +56,13 @@ export default function Footer() {
               <p>250 Mill Street BL1225<br />Taylors, SC 29687</p>
             </div>
             <div className="flex gap-4 mt-6">
-              <a href="#" aria-label="Instagram" className="text-white/40 hover:text-white transition-colors text-sm tracking-wide">
+              <a
+                href="https://www.instagram.com/marydenmanphotography/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="text-white/40 hover:text-white transition-colors text-sm tracking-wide"
+              >
                 Instagram
               </a>
               <a href="#" aria-label="Facebook" className="text-white/40 hover:text-white transition-colors text-sm tracking-wide">

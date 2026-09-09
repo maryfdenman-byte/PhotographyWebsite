@@ -9,7 +9,7 @@ const steps = [
   {
     number: '02',
     title: 'Get Coached',
-    description: "I guide you through every pose and expression. Camera shy? That's my specialty. No experience needed.",
+    description: "I guide you through every pose and expression, and we review your images together as we shoot. Camera shy? That's my specialty. No experience needed.",
   },
   {
     number: '03',

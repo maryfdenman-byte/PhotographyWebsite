@@ -74,10 +74,11 @@ Used by `Footer.tsx` and the highlighted card in `PricingSection.tsx`.
 - **Phone:** (864) 380-4905
 - **Email:** maryfdenman@gmail.com
 - **Tagline:** "From Uncomfortable to Confident in One Session"
-- **Hours:** By appointment (closed Sunday)
+- **Hours:** Mon closed · Tue 9–5 · Wed 9–11 & 3–5 · Thu 9–5 · Fri 9–5 · Sat/Sun closed (per marydenman.com, verified 2026-09-09)
 - **Services:** Corporate, Actor, LinkedIn, Office/Team Headshots, Portraits, On-Location, Branding, Events
 - **Pricing:** $125 session fee + $125 per finished image
 - **Payments:** Cash, Credit Card, Venmo, Cash App, PayPal
+- **Experience:** 10+ years, 500+ sessions — confirmed by Mary 2026-09-09; not published on marydenman.com
 
 ---
 

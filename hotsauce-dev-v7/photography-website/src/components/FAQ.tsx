@@ -19,7 +19,7 @@ const faqs = [
   },
   {
     q: 'Where is your studio?',
-    a: 'My studio is at the historic Taylors Mill, 250 Mill Street BL1225, Taylors, SC 29687 — a beautiful, creative space with great natural light.',
+    a: 'My studio is at the historic Taylors Mill, 250 Mill Street BL1225, Taylors, SC 29687 — a beautiful, creative space with great natural light. Whether you want clean, modern headshots or images that use the original settings of the 1924 Mill as your background, I can accommodate what you have in mind.',
   },
   {
     q: 'How do I pay?',

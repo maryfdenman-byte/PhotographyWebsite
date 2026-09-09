@@ -48,7 +48,8 @@ it walks through it step by step. This file explains what everything *is*.
 
 ### Components — `src/components/`
 
-Header (sticky, goes transparent → white on scroll), Footer, Hero, Gallery
+Header (sticky, goes transparent → white on scroll), Footer (Instagram,
+Facebook, LinkedIn), Hero, Gallery
 (masonry grid of 10 curated headshots), Process (Schedule → Get Coached → Walk
 Away Confident), Testimonials (real client quotes), LaughingCarousel, FAQ
 (8-question accordion), AboutSection, PricingSection, ContactSection, and Layout
@@ -78,8 +79,13 @@ future use; see `public/images/README.md`. Videos live in `public/videos/`.
 ### Real business details baked into the site
 
 Taylors Mill studio, 250 Mill Street BL1225, Taylors, SC 29687 · (864) 380-4905 ·
-$125 session fee + $125 per finished image · by appointment, closed Sunday ·
+$125 session fee + $125 per finished image · open Tue–Fri, closed Mon/Sat/Sun ·
 tagline "From Uncomfortable to Confident in One Session."
+
+Every one of these was checked against marydenman.com on 2026-09-09. Testimonial
+quotes are the clients' exact published words — do not paraphrase or add job
+titles. Claims about retouching, delivery and typical image counts come from Mary
+directly, not the live site; check with her before adding new ones.
 
 ---
 

@@ -2,6 +2,12 @@ import Link from 'next/link'
 
 const payments = ['Cash', 'Credit Card', 'Venmo', 'Cash App', 'PayPal']
 
+const sessionIncludes = [
+  'Studio sessions at historic Taylors Mill',
+  'Live viewing of your images as we shoot',
+  'Original 1924 Mill settings as backdrops',
+]
+
 export default function PricingSection() {
   return (
     <section id="pricing" className="py-24 bg-[#fbfaf8]">
@@ -14,17 +20,14 @@ export default function PricingSection() {
           <p className="mt-4 text-[#202a91]/50 text-sm">Simple, transparent pricing — no hidden fees.</p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-          <div className="bg-[#f4f3ee] p-10 border border-[#D3AF37]/20">
+        <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto items-stretch">
+          <div className="bg-[#f4f3ee] p-10 border border-[#D3AF37]/20 flex flex-col">
             <p className="text-xs tracking-[0.3em] uppercase text-[#202a91]/40 mb-2">Session Fee</p>
             <p className="text-5xl font-bold text-[#202a91] mb-2">$125</p>
             <p className="text-[#202a91]/60 text-sm leading-relaxed mb-6">
               Covers your full session — coaching, lighting, wardrobe guidance, and all the time you need to feel great.
             </p>
-            <ul className="space-y-2 text-sm text-[#202a91]/70">
-              <li className="flex items-center gap-2">
-                <span className="text-[#D3AF37]">✓</span> Studio sessions
-              </li>
+            <ul className="space-y-2 text-sm text-[#202a91]/70 mt-auto">
               <li className="flex items-center gap-2">
                 <span className="text-[#D3AF37]">✓</span> Professional coaching included
               </li>
@@ -34,23 +37,34 @@ export default function PricingSection() {
             </ul>
           </div>
 
-          <div className="bg-gradient-to-br from-[#2f3fc0] via-[#202a91] to-[#0f1550] p-10">
+          <div className="bg-gradient-to-br from-[#2f3fc0] via-[#202a91] to-[#0f1550] p-10 flex flex-col">
             <p className="text-xs tracking-[0.3em] uppercase text-white/40 mb-2">Per Image</p>
             <p className="text-5xl font-bold text-white mb-2">$125</p>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
-              You choose only the images you love. Most clients select 2–5 images. All images fully retouched and delivered digitally.
+              You choose exactly which images you want, after you have seen them.
             </p>
-            <ul className="space-y-2 text-sm text-white/70">
+            <ul className="space-y-2 text-sm text-white/70 mt-auto">
               <li className="flex items-center gap-2">
                 <span className="text-[#D3AF37]">✓</span> Professional retouching included
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-[#D3AF37]">✓</span> High-resolution digital delivery
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="text-[#D3AF37]">✓</span> No minimum purchase required
+                <span className="text-[#D3AF37]">✓</span> Most clients select 2–5 images
               </li>
             </ul>
+          </div>
+        </div>
+
+        <div className="max-w-3xl mx-auto mt-8 border border-[#D3AF37]/20 p-8">
+          <p className="text-xs tracking-[0.3em] uppercase text-[#202a91]/40 mb-6 text-center">
+            Every session includes
+          </p>
+          <div className="grid sm:grid-cols-3 gap-6 text-sm text-[#202a91]/70">
+            {sessionIncludes.map((item) => (
+              <div key={item} className="flex items-start gap-2">
+                <span className="text-[#D3AF37] leading-6">✓</span>
+                <span>{item}</span>
+              </div>
+            ))}
           </div>
         </div>
 

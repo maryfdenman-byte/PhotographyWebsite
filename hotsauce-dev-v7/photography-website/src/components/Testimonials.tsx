@@ -1,21 +1,18 @@
 const testimonials = [
   {
     quote:
-      "Mary made me feel so comfortable in front of the camera. I was so nervous going in, but she coached me through every shot. I absolutely love my headshots and have gotten so many compliments on them!",
+      "I would highly recommend Mary. She has talent and it shows. It was very enjoyable to just be with her. She makes you feel very comfortable in front of the camera.",
     name: "Michelle Russ",
-    title: "Marketing Professional",
   },
   {
     quote:
-      "I've had headshots done before, but nothing like this. Mary has a gift for bringing out the best in people. My new headshots look natural, professional, and like the best version of me.",
+      "Mary made it so easy for me to be myself in front of the camera. I now have photos that convey exactly the message I want others to see when I have to make a first impression.",
     name: "Rick Burris",
-    title: "Business Executive",
   },
   {
     quote:
-      "Mary is incredibly talented and so easy to work with. She made the whole session fun and stress-free. My headshots exceeded every expectation I had.",
+      "Mary took the time to understand what I was looking for and empowered me to be myself. She was so kind and fun to work with. I couldn't be happier with my experience.",
     name: "Sam Eaton",
-    title: "Author & Speaker",
   },
 ]
 
@@ -41,10 +38,7 @@ export default function Testimonials() {
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#A07810] via-[#D3AF37] to-[#F5D060] flex items-center justify-center text-white text-sm font-bold">
                   {t.name[0]}
                 </div>
-                <div>
-                  <p className="text-[#202a91] font-semibold text-sm">{t.name}</p>
-                  <p className="text-[#202a91]/40 text-xs tracking-wide">{t.title}</p>
-                </div>
+                <p className="text-[#202a91] font-semibold text-sm">{t.name}</p>
               </div>
             </div>
           ))}

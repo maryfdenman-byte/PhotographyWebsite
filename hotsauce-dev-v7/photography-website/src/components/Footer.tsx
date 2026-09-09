@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Instagram, Linkedin } from 'lucide-react'
+import { Facebook, Instagram, Linkedin } from 'lucide-react'
 
 const navLinks = [
   { name: 'Portfolio', href: '/#portfolio' },
@@ -65,6 +65,15 @@ export default function Footer() {
                 className="w-10 h-10 flex items-center justify-center border border-[#D3AF37]/30 text-[#D3AF37] hover:text-[#F5D060] hover:border-[#F5D060] hover:bg-[#D3AF37]/10 transition-all"
               >
                 <Instagram size={18} strokeWidth={1.5} />
+              </a>
+              <a
+                href="https://www.facebook.com/Mary-Denman-Photography-120963605132296/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="w-10 h-10 flex items-center justify-center border border-[#D3AF37]/30 text-[#D3AF37] hover:text-[#F5D060] hover:border-[#F5D060] hover:bg-[#D3AF37]/10 transition-all"
+              >
+                <Facebook size={18} strokeWidth={1.5} />
               </a>
               <a
                 href="https://www.linkedin.com/in/mary-denman-226918137"

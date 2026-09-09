@@ -7,17 +7,16 @@ const services = [
   'Author / Speaker Portraits',
   'LinkedIn Portraits',
   'Branding Photography',
-  'Event Photography',
   'Other',
 ]
 
 const hours = [
-  { day: 'Monday', time: 'By Appointment' },
-  { day: 'Tuesday', time: 'By Appointment' },
-  { day: 'Wednesday', time: 'By Appointment' },
-  { day: 'Thursday', time: 'By Appointment' },
-  { day: 'Friday', time: 'By Appointment' },
-  { day: 'Saturday', time: 'By Appointment' },
+  { day: 'Monday', time: 'Closed' },
+  { day: 'Tuesday', time: '9am – 5pm' },
+  { day: 'Wednesday', time: '9–11am, 3–5pm' },
+  { day: 'Thursday', time: '9am – 5pm' },
+  { day: 'Friday', time: '9am – 5pm' },
+  { day: 'Saturday', time: 'Closed' },
   { day: 'Sunday', time: 'Closed' },
 ]
 
@@ -128,7 +127,7 @@ export default function ContactSection() {
               <div className="flex flex-col items-center justify-center h-full text-center py-16">
                 <div className="text-4xl mb-4">✓</div>
                 <h3 className="text-xl font-bold text-[#202a91] mb-2">Message Sent!</h3>
-                <p className="text-[#202a91]/60 text-sm">I&apos;ll be in touch within 24 hours.</p>
+                <p className="text-[#202a91]/60 text-sm">I&apos;ll be in touch within 2 business days.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">

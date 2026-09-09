@@ -8,3 +8,12 @@ logs/
 
 # Claude Code personal settings
 **/.claude/settings.local.json
+
+# Video source files — hosted externally, never committed (see #19).
+# They are 41-137MB each; git history is permanent, so a stray `git add`
+# would bloat every clone of this public repo forever.
+*.mp4
+*.mov
+*.m4v
+*.webm
+*.avi

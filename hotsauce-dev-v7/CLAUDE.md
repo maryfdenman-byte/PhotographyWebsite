@@ -3,6 +3,31 @@
 ## Project Overview
 Bulletproof Next.js development environment for photographers transitioning from WordPress/Squarespace to modern web development using Claude Code.
 
+## The live site is NOT this site
+
+Mary already runs a live photography site at **marydenman.com**, built on
+Squarespace. It is a separate, existing business site — verified 2026-09-10:
+same business, same Taylors Mill studio address, headline "From uncomfortable
+to confident in one photo session".
+
+**This repository is a different, new Next.js site.** It has never been
+deployed: no `vercel.json`, no `netlify.toml`, and GitHub Pages returns 404.
+It has no domain, and search engines have never crawled it.
+
+Do not conflate the two:
+
+- "The site", "our SEO", "our rank" in this repo means the **undeployed
+  Next.js build**, which has no traffic, no index presence, and no rank.
+- Never audit, measure, or draw conclusions about marydenman.com and report
+  them as findings about this repo, or the reverse.
+- Whether this build is meant to replace marydenman.com on that domain, or
+  launch somewhere else, is **not yet decided** — ask Mary rather than
+  assuming. The answer changes everything about redirects, canonical URLs
+  (#26), and whether the two sites would compete with each other.
+- Real ranking data for marydenman.com lives in Mary's Google Search Console
+  and Google Business Profile. Web searches run from a dev machine are
+  personalized and location-skewed; they are not rank measurements.
+
 ## Project Goals
 - Create reliable, conflict-free development environment
 - Separate content from code (frontmatter approach)

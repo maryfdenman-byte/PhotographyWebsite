@@ -10,13 +10,14 @@ const nav = [
   { name: 'Contact', href: '/contact' },
 ]
 
-// Stubbed headshot categories for the Headshots dropdown. Photos are real files
-// from public/images; every href points at the portfolio anchor until each
-// category gets its own page.
+// Headshot categories for the Headshots dropdown. Photos are real files from
+// public/images. Corporate and Doctor have their own service+location pages;
+// the remaining four still point at the portfolio anchor until they get pages
+// of their own, which waits on Mary writing the copy for each.
 const headshots = [
-  { label: 'Corporate', src: '/images/mary-denman-corporate-headshot-greenville-sc.jpg',        href: '/#portfolio' },
+  { label: 'Corporate', src: '/images/mary-denman-corporate-headshot-greenville-sc.jpg',        href: '/corporate-headshots-greenville-sc' },
   { label: 'Author',    src: '/images/mary-denman-author-headshot-greenville-sc.jpg',           href: '/#portfolio' },
-  { label: 'Doctor',    src: '/images/mary-denman-doctor-headshot-greenville-sc.jpg',           href: '/#portfolio' },
+  { label: 'Doctor',    src: '/images/mary-denman-doctor-headshot-greenville-sc.jpg',           href: '/doctor-headshots-greenville-sc' },
   { label: 'Duo',       src: '/images/mary-denman-duo-headshot-greenville-sc-harry-cindy.jpg',  href: '/#portfolio' },
   { label: 'Fun',       src: '/images/mary-denman-fun-headshot-greenville-sc.jpg',              href: '/#portfolio' },
   { label: 'Model',     src: '/images/mary-denman-model-headshot-greenville-sc.jpg',            href: '/#portfolio' },

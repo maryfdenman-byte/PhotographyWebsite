@@ -8,20 +8,11 @@ const navLinks = [
   { name: 'Contact', href: '/contact' },
 ]
 
-// The header's Headshots dropdown only mounts its links once it is open, so
-// those hrefs are absent from the served HTML and a crawler never sees them.
-// The footer renders on every page unconditionally, which is what makes these
-// service pages reachable rather than orphaned.
-const serviceLinks = [
-  { name: 'Corporate Headshots', href: '/corporate-headshots-greenville-sc' },
-  { name: 'Doctor Headshots', href: '/doctor-headshots-greenville-sc' },
-]
-
 export default function Footer() {
   return (
     <footer className="bg-gradient-to-br from-[#2f3fc0] via-[#202a91] to-[#0f1550] text-white">
       <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-12 mb-12">
+        <div className="grid md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
           <div>
             <div className="mb-4">
@@ -40,20 +31,6 @@ export default function Footer() {
             <p className="text-xs tracking-widest uppercase text-white/30 mb-4">Navigate</p>
             <ul className="space-y-2">
               {navLinks.map((l) => (
-                <li key={l.name}>
-                  <Link href={l.href} className="text-sm text-white/60 hover:text-white transition-colors">
-                    {l.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div>
-            <p className="text-xs tracking-widest uppercase text-white/30 mb-4">Headshots</p>
-            <ul className="space-y-2">
-              {serviceLinks.map((l) => (
                 <li key={l.name}>
                   <Link href={l.href} className="text-sm text-white/60 hover:text-white transition-colors">
                     {l.name}

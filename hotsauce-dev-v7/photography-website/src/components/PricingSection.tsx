@@ -54,9 +54,8 @@ export default function PricingSection() {
           </div>
         </div>
 
-        {/* Corporate and on-location work is priced differently from an
-            individual session: the fee covers Mary travelling to the client
-            and setting up there, while images stay at the same rate. */}
+        {/* On-location work is priced differently from an individual session:
+            the fee covers the time onsite, while images stay at the same rate. */}
         <div className="max-w-3xl mx-auto mt-8 bg-[#f4f3ee] border border-[#D3AF37]/20 p-10">
           <p className="text-xs tracking-[0.3em] uppercase text-[#202a91]/40 mb-2">Corporate &amp; On-Location</p>
           <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 mb-3">
@@ -64,7 +63,7 @@ export default function PricingSection() {
             <p className="text-[#202a91]/60 text-sm">for up to three hours onsite, plus $125 per image</p>
           </div>
           <p className="text-[#202a91]/60 text-sm leading-relaxed">
-            I bring the studio to your office anywhere in the Greenville area and photograph your whole team, coaching everyone through it. Images are the same $125 each, so each person chooses exactly how many they want.
+            On-location sessions for corporate teams and offices throughout the Greenville, SC area. Images are the same $125 each.
           </p>
         </div>
 

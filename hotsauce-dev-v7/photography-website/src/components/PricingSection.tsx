@@ -61,7 +61,7 @@ export default function PricingSection() {
           <p className="text-xs tracking-[0.3em] uppercase text-[#202a91]/40 mb-2">Corporate &amp; On-Location</p>
           <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 mb-3">
             <p className="text-5xl font-bold text-[#202a91]">$600</p>
-            <p className="text-[#202a91]/60 text-sm">onsite, plus $125 per image</p>
+            <p className="text-[#202a91]/60 text-sm">for up to three hours onsite, plus $125 per image</p>
           </div>
           <p className="text-[#202a91]/60 text-sm leading-relaxed">
             I bring the studio to your office anywhere in the Greenville area and photograph your whole team, coaching everyone through it. Images are the same $125 each, so each person chooses exactly how many they want.

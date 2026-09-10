@@ -11,7 +11,7 @@ const faqs = [
   },
   {
     q: 'Can you come to our office?',
-    a: 'Yes! I offer on-location sessions for corporate teams and offices throughout the Greenville, SC area. The fee is $600 for me to be onsite, plus $125 per image, and there is no limit on how many people I photograph while I am there.',
+    a: 'Yes! I offer on-location sessions for corporate teams and offices throughout the Greenville, SC area. The fee is $600 for up to three hours onsite, plus $125 per image.',
   },
   {
     q: 'What should I wear?',

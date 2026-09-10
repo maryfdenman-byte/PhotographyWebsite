@@ -37,7 +37,8 @@ export default function CorporateHeadshotsPage() {
           {
             heading: 'What it costs',
             paragraphs: [
-              'For an on-location session, the fee is $600 for me to be onsite with you, and images are priced at $125 each — so each person chooses exactly how many they want. Most clients select two to five.',
+              'For an on-location session, the fee is $600 for up to three hours onsite, and images are priced at $125 each — so each person chooses exactly how many they want. Most clients select two to five.',
+              'Three hours is enough for a good-sized team when everyone is ready and takes their turn. If you think your group needs longer than that, say so when you get in touch and we will work out what it takes.',
               'If you would rather come to the studio at Taylors Mill, see the pricing page for session rates. Either way, tell me roughly how many people are involved and I will put a quote together.',
               'I accept cash, credit card, Venmo, Cash App, and PayPal, and payment is due at the time of the session.',
             ],

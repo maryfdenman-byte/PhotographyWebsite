@@ -44,7 +44,7 @@ export default function DoctorHeadshotsPage() {
             heading: 'Practical details',
             paragraphs: [
               'For an individual session at the studio, the fee is $125 and covers the shoot. Images are $125 each, so you take exactly the number you need — most clients choose two to five, which is usually enough for a practice bio, a directory listing, and LinkedIn.',
-              'If I come to your practice instead, the fee is $600 for me to be onsite, and images stay at $125 each. That is usually the sensible choice once more than one or two people need photographing.',
+              'If I come to your practice instead, the fee is $600 for up to three hours onsite, and images stay at $125 each. That is usually the sensible choice once more than one or two people need photographing.',
               'Wear something that makes you feel confident and professional; solid colors photograph better than busy patterns. Bring a couple of options, including a white coat or scrubs if you want a version in them. I accept cash, credit card, Venmo, Cash App, and PayPal.',
             ],
           },

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { useState } from 'react'
 
 const slides = [
@@ -43,16 +44,18 @@ export default function LaughingCarousel() {
             {visible.map((slide, i) => (
               <div
                 key={i}
-                className={`overflow-hidden min-w-0 transition-all duration-300 ${
+                className={`relative overflow-hidden min-w-0 transition-all duration-300 ${
                   i === 1
                     ? 'basis-full sm:basis-[48%] max-w-xs aspect-[4/3]'
                     : 'hidden sm:block basis-[26%] max-w-[160px] aspect-[4/3]'
                 }`}
               >
-                <img
+                <Image
                   src={slide.src}
                   alt={slide.alt}
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 640px) 100vw, 320px"
+                  className="object-cover"
                 />
               </div>
             ))}

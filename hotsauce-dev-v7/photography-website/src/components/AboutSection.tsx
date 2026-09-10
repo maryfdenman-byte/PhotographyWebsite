@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 export default function AboutSection() {
@@ -10,11 +11,11 @@ export default function AboutSection() {
           <p className="text-base tracking-[0.3em] uppercase font-bold mb-4 bg-gradient-to-r from-[#A07810] via-[#F5D060] to-[#A07810] bg-clip-text text-transparent">
             About Me
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-6 text-[#202a91]">
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6 text-[#202a91]">
             Hello, I&apos;m
             <br />
             <span className="italic font-light">Mary Denman</span>
-          </h2>
+          </h1>
           <div className="space-y-4 text-[#202a91]/65 leading-relaxed text-sm md:text-base">
             <p>
               I&apos;m a Greenville, SC-based photographer specializing in headshots and portraits that help professionals, actors, and corporate teams show up with confidence.
@@ -52,11 +53,14 @@ export default function AboutSection() {
 
         {/* Photo beside bio */}
         <div className="relative order-first md:order-none">
-          <div className="aspect-[4/3] md:aspect-[3/4] w-full max-w-md ml-auto overflow-hidden bg-stone-100 rounded-2xl">
-            <img
+          <div className="relative aspect-[4/3] md:aspect-[3/4] w-full max-w-md ml-auto overflow-hidden bg-stone-100 rounded-2xl">
+            <Image
               src="/images/about/mary-denman-headshot-photographer-greenville-sc.jpg"
               alt="Mary Denman - Professional Headshot Photographer Greenville SC"
-              className="w-full h-full object-cover"
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, 28rem"
+              className="object-cover"
             />
           </div>
           <div className="absolute -bottom-4 -right-4 w-full max-w-md h-full border border-[#D3AF37]/40 -z-10 hidden md:block" />

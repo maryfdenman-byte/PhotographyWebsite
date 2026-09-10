@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Hero() {
@@ -44,11 +45,16 @@ export default function Hero() {
 
         {/* Hero image */}
         <div className="relative order-first md:order-none">
-          <div className="aspect-[4/3] md:aspect-[3/4] w-full max-w-md ml-auto overflow-hidden bg-stone-100">
-            <img
+          <div className="relative aspect-[4/3] md:aspect-[3/4] w-full max-w-md ml-auto overflow-hidden bg-stone-100">
+            {/* Largest Contentful Paint element on the home page: priority skips
+                lazy-loading and asks the browser to fetch it first. */}
+            <Image
               src="/images/gallery/mary-denman-model-headshot-greenville-sc.jpg"
               alt="Model Headshot - Mary Denman Photography Greenville SC"
-              className="w-full h-full object-cover"
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, 28rem"
+              className="object-cover"
             />
           </div>
           <div className="absolute -bottom-4 -left-4 w-full max-w-md h-full border border-[#D3AF37]/40 -z-10 hidden md:block" />

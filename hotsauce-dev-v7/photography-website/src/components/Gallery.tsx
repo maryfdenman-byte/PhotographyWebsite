@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 // Mosaic grid, filled column by column: a portrait fills a whole column height of
 // two rows, a landscape pair stacks to fill the same space. The number of rows per
 // breakpoint therefore sets the number of columns — 6 rows gives 2 columns on a
@@ -46,10 +48,12 @@ export default function Gallery() {
               photo.orientation === 'portrait' ? 'row-span-2' : 'row-span-1'
             }`}
           >
-            <img
+            <Image
               src={photo.src}
               alt={`${photo.label} - Mary Denman Photography Greenville SC`}
-              className="w-full h-full object-cover"
+              fill
+              sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 17vw"
+              className="object-cover"
             />
             <div className="absolute inset-0 bg-white/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-1">
               <p className="text-[#202a91] font-semibold tracking-wide text-sm">{photo.label}</p>

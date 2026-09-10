@@ -7,6 +7,11 @@ const nextConfig = {
   // NEXT_DIST_DIR=.next-dev; 'next build' is left on the default '.next' so
   // Vercel's deployment is unaffected.
   distDir: process.env.NEXT_DIST_DIR || '.next',
+  images: {
+    // Serve AVIF/WebP variants of the JPEG originals. Cuts the bytes a phone
+    // downloads without touching the source files under public/images.
+    formats: ['image/avif', 'image/webp'],
+  },
   experimental: {
     // Reduce memory usage by optimizing common imports
     optimizePackageImports: ['lucide-react'],

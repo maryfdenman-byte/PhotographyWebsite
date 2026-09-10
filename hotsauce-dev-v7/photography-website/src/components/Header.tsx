@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
@@ -42,9 +43,12 @@ export default function Header() {
       <div className="relative max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
         {/* Logo */}
         <Link href="/" className="flex items-center">
-          <img
+          <Image
             src="/images/logo/mary-denman-photography-logo-blue.png"
             alt="Mary Denman Photography"
+            width={700}
+            height={150}
+            priority
             className="h-8 sm:h-10 w-auto"
           />
         </Link>
@@ -72,7 +76,9 @@ export default function Header() {
                 >
                   <button
                     className="flex items-center gap-1 text-sm tracking-wide transition-colors text-[#202a91]/70 hover:text-[#202a91]"
-                    onClick={() => setHeadshotsOpen(!headshotsOpen)}
+                    /* hover already opens the panel, so a click only ever opens it —
+                       toggling here would close it the instant it was hovered open */
+                    onClick={() => setHeadshotsOpen(true)}
                     aria-expanded={headshotsOpen}
                   >
                     Headshots
@@ -90,11 +96,13 @@ export default function Header() {
                             className="group block"
                             onClick={() => setHeadshotsOpen(false)}
                           >
-                            <div className="aspect-[2/3] overflow-hidden rounded-lg bg-[#202a91]/5">
-                              <img
+                            <div className="relative aspect-[2/3] overflow-hidden rounded-lg bg-[#202a91]/5">
+                              <Image
                                 src={shot.src}
                                 alt={`${shot.label} headshot by Mary Denman Photography`}
-                                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                fill
+                                sizes="200px"
+                                className="object-cover transition-transform duration-300 group-hover:scale-105"
                               />
                             </div>
                             <p className="mt-2 text-xs tracking-wide text-[#202a91]/70 group-hover:text-[#202a91]">
@@ -165,11 +173,13 @@ export default function Header() {
                             setMenuOpen(false)
                           }}
                         >
-                          <div className="aspect-[2/3] overflow-hidden rounded-lg bg-[#202a91]/5">
-                            <img
+                          <div className="relative aspect-[2/3] overflow-hidden rounded-lg bg-[#202a91]/5">
+                            <Image
                               src={shot.src}
                               alt={`${shot.label} headshot by Mary Denman Photography`}
-                              className="h-full w-full object-cover"
+                              fill
+                              sizes="200px"
+                              className="object-cover"
                             />
                           </div>
                           <p className="mt-1 text-xs text-[#202a91]/70">{shot.label}</p>

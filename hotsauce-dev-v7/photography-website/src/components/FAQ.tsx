@@ -35,11 +35,28 @@ const faqs = [
   },
 ]
 
+// Google reads the answers from this JSON-LD, not from the accordion markup, so
+// it is built from the same `faqs` array the accordion renders — one source of
+// truth, no chance of the two drifting apart.
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.q,
+    acceptedAnswer: { '@type': 'Answer', text: faq.a },
+  })),
+}
+
 export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null)
 
   return (
     <section id="faq" className="py-24 bg-[#fbfaf8]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <div className="max-w-3xl mx-auto px-6">
         <div className="mb-16 text-center">
           <p className="text-base tracking-[0.3em] uppercase font-bold mb-3 bg-gradient-to-r from-[#A07810] via-[#F5D060] to-[#A07810] bg-clip-text text-transparent">

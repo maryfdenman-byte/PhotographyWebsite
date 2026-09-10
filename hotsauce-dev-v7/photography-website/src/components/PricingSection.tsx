@@ -16,7 +16,7 @@ export default function PricingSection() {
           <p className="text-base tracking-[0.3em] uppercase font-bold mb-3 bg-gradient-to-r from-[#A07810] via-[#F5D060] to-[#A07810] bg-clip-text text-transparent">
             Investment
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#202a91]">Pricing</h2>
+          <h1 className="text-4xl md:text-5xl font-bold text-[#202a91]">Pricing</h1>
           <p className="mt-4 text-[#202a91]/50 text-sm">Simple, transparent pricing — no hidden fees.</p>
         </div>
 

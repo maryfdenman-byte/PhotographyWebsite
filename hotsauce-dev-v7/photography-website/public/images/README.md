@@ -29,9 +29,9 @@ Two things to know about keeping them here:
 
   | Copy | Duplicate of |
   |---|---|
-  | `mary-denman-business-headshot-greenville-sc-todd-2.jpg` | `...-todd.jpg` |
+  | `mary-denman-business-headshot-greenville-sc-3.jpg` | `...-sc-4.jpg` |
   | `mary-denman-professional-headshots-greenville-sc.jpg` | `gallery/mary-denman-professional-headshots-greenville-sc.jpg` |
-  | `mary-denman-candid-headshot-session-greenville-sc.jpg` | `mary-denman-professional-headshot-greenville-sc-cheryl.jpg` |
+  | `mary-denman-candid-headshot-session-greenville-sc.jpg` | `mary-denman-professional-headshot-greenville-sc-10.jpg` |
   | `mary-denman-headshot-session-greenville-sc-3.jpeg` | `...-2.jpeg` |
   | `mary-denman-model-headshot-greenville-sc-2.jpg` | `...-model-headshot-greenville-sc.jpg` |
 
@@ -45,3 +45,13 @@ does not reference it yet.
 ## Naming
 
 `mary-denman-[service-type]-[description]-[location].jpg`
+
+## Client names removed from filenames
+
+On 2026-09-10, 37 filenames that contained a client's first name (for example
+`...-greenville-sc-richard.jpg`) were renamed to numbered equivalents. This
+repository is public, so those names were readable by anyone. The photographs
+themselves are unchanged; only the filenames moved.
+
+Note that the old names remain in the git history. Removing them from history
+would mean rewriting it, which has not been done.

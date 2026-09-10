@@ -17,7 +17,7 @@ const headshots = [
   { label: 'Corporate', src: '/images/mary-denman-corporate-headshot-greenville-sc.jpg',        href: '/#portfolio' },
   { label: 'Author',    src: '/images/mary-denman-author-headshot-greenville-sc.jpg',           href: '/#portfolio' },
   { label: 'Doctor',    src: '/images/mary-denman-doctor-headshot-greenville-sc.jpg',           href: '/#portfolio' },
-  { label: 'Duo',       src: '/images/mary-denman-duo-headshot-greenville-sc-harry-cindy.jpg',  href: '/#portfolio' },
+  { label: 'Duo',       src: '/images/mary-denman-duo-headshot-greenville-sc-4.jpg',  href: '/#portfolio' },
   { label: 'Fun',       src: '/images/mary-denman-fun-headshot-greenville-sc.jpg',              href: '/#portfolio' },
   { label: 'Model',     src: '/images/mary-denman-model-headshot-greenville-sc.jpg',            href: '/#portfolio' },
 ]

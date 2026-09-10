@@ -9,7 +9,7 @@ export default function CorporateHeadshotsPage() {
   return (
     <Layout
       title="Corporate Headshots in Greenville, SC — Mary Denman Photography"
-      description="Corporate headshots for Greenville and Taylors, SC teams. I photograph at my Taylors Mill studio or bring the studio to your office, and coach everyone through it. $125 session + $125 per image."
+      description="Corporate headshots for Greenville and Taylors, SC teams. I bring the studio to your office for $600 onsite, plus $125 per image, and coach everyone through it. Studio sessions at Taylors Mill also available."
     >
       <ServicePage
         eyebrow="Corporate Headshots"
@@ -37,7 +37,8 @@ export default function CorporateHeadshotsPage() {
           {
             heading: 'What it costs',
             paragraphs: [
-              'The session fee is $125 and covers the shoot itself. Images are priced at $125 each, so each person chooses exactly how many they want — most clients select two to five. For a team booking, tell me roughly how many people are involved and I will put together a quote.',
+              'For an on-location session, the fee is $600 for me to be onsite with you, and images are priced at $125 each — so each person chooses exactly how many they want. Most clients select two to five.',
+              'If you would rather come to the studio at Taylors Mill, see the pricing page for session rates. Either way, tell me roughly how many people are involved and I will put a quote together.',
               'I accept cash, credit card, Venmo, Cash App, and PayPal, and payment is due at the time of the session.',
             ],
           },

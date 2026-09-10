@@ -22,7 +22,7 @@ export default function PricingSection() {
 
         <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto items-stretch">
           <div className="bg-[#f4f3ee] p-10 border border-[#D3AF37]/20 flex flex-col">
-            <p className="text-xs tracking-[0.3em] uppercase text-[#202a91]/40 mb-2">Session Fee</p>
+            <p className="text-xs tracking-[0.3em] uppercase text-[#202a91]/40 mb-2">Individual Session Fee</p>
             <p className="text-5xl font-bold text-[#202a91] mb-2">$125</p>
             <p className="text-[#202a91]/60 text-sm leading-relaxed mb-6">
               Covers your full session — coaching, lighting, wardrobe guidance, and all the time you need to feel great.
@@ -52,6 +52,20 @@ export default function PricingSection() {
               </li>
             </ul>
           </div>
+        </div>
+
+        {/* Corporate and on-location work is priced differently from an
+            individual session: the fee covers Mary travelling to the client
+            and setting up there, while images stay at the same rate. */}
+        <div className="max-w-3xl mx-auto mt-8 bg-[#f4f3ee] border border-[#D3AF37]/20 p-10">
+          <p className="text-xs tracking-[0.3em] uppercase text-[#202a91]/40 mb-2">Corporate &amp; On-Location</p>
+          <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 mb-3">
+            <p className="text-5xl font-bold text-[#202a91]">$600</p>
+            <p className="text-[#202a91]/60 text-sm">onsite, plus $125 per image</p>
+          </div>
+          <p className="text-[#202a91]/60 text-sm leading-relaxed">
+            I bring the studio to your office anywhere in the Greenville area and photograph your whole team, coaching everyone through it. Images are the same $125 each, so each person chooses exactly how many they want.
+          </p>
         </div>
 
         <div className="max-w-3xl mx-auto mt-8 border border-[#D3AF37]/20 p-8">

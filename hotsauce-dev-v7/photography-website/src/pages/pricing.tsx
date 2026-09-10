@@ -6,7 +6,7 @@ export default function PricingPage() {
   return (
     <Layout
       title="Pricing — Mary Denman Photography Greenville SC"
-      description="Headshot session fee $125 + $125 per image. Professional coaching included. Studio at Taylors Mill, Taylors SC. Accepts cash, credit card, Venmo, Cash App, PayPal."
+      description="Individual headshots: $125 session fee + $125 per image. Corporate on-location: $600 onsite + $125 per image. Coaching included. Studio at Taylors Mill, Taylors SC."
     >
       <div className="pt-20">
         <PricingSection />
